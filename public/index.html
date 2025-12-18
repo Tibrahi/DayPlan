@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Day Planner</title>
+    <link rel="icon" type="image/png" href="./assets/logo.png" />
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <h1 class="logo">PLANNER</h1>
+            
+            <div class="input-group">
+                <label>Select Date</label>
+                <input type="date" id="plan-date">
+            </div>
+
+            <div class="time-picker">
+                <div class="input-group">
+                    <label>Hour</label>
+                    <select id="plan-hour"></select>
+                </div>
+                <div class="input-group">
+                    <label>Minute</label>
+                    <select id="plan-minute"></select>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Task Description</label>
+                <textarea id="plan-task" placeholder="What are we achieving?"></textarea>
+            </div>
+
+            <button id="add-task-btn">Add to Schedule</button>
+            <button id="download-btn" class="secondary">Download PDF</button>
+        </aside>
+
+        <main class="preview-area">
+            <div id="pdf-content" class="planner-page">
+                <header class="page-header">
+                    <h2 id="display-date">Select a Date</h2>
+                    <div class="line"></div>
+                </header>
+                
+                <div id="schedule-list" class="schedule-list">
+                    <p class="placeholder-text">Your schedule is empty...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
